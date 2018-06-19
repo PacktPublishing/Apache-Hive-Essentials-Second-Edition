@@ -30,7 +30,10 @@ AS female_age_sum FROM employee;
 
 --Nested aggregate functions are not allowed
 --FAILED: SemanticException [Error 10128]: Line 1:11 Not yet supported place for UDAF 'count'
---SELECT avg(count(*)) AS row_cnt FROM employee;    
+--SELECT avg(count(*)) AS row_cnt FROM employee; 
+
+--Aggregate functions cannot apply to null
+--SELECT sum(null), avg(null); 
 
 --Aggregation across columns with NULL value.
 SELECT max(null), min(null), count(null);
@@ -198,7 +201,7 @@ ORDER BY deptno, name;
 
 --aggregate in over clause
 SELECT
-ept_num,
+dept_num,
 rank() OVER (PARTITION BY dept_num ORDER BY sum(salary)) as rk
 FROM employee_contract
 GROUP BY dept_num;
