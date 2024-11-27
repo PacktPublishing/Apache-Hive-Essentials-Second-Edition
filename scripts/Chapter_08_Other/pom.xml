@@ -19,7 +19,7 @@
     <hive.version>1.2.1</hive.version>
     <hadoop.version>2.7.3</hadoop.version>
     <jdk.version>0.11.0.0-cp1</jdk.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <mvnshade.version>2.4.1</mvnshade.version>
   </properties>
 
